@@ -16,12 +16,23 @@
             <li><a href="#">About us</a></li>
             <li><a href="#">Contact us</a></li>
         </ul>
+
+        <!-- for mobile devices -->
+        <button class="menu-btn">≡</button>
+        <div class="menu">
+            <h3 class="cancel">×</h3>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+        </div>
     </header>
 
     <main>
     <!-- Navigation bar of this site -->
     <nav>
         <h2>Filters</h2>
+        <button id="filterButton">Filters</button>
+        <div class="navbar">
         <div class="filter-div">
         <h3>Price</h3>
         <select id="priceFilter">
@@ -50,6 +61,7 @@
             <option value="lowToHigh">Low to High</option>
         </select>
         </div>
+    </div>
     </nav>
 
     <!-- Main section of this site -->

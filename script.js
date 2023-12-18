@@ -9,6 +9,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('priceFilter').addEventListener('change', applyFilters);
     document.getElementById('ratingFilter').addEventListener('change', applyFilters);
     document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    const filterButton = document.getElementById('filterButton');
+    const navbar = document.querySelector('.navbar');
+
+    filterButton.addEventListener('click', function () {
+        navbar.classList.toggle('visible');
+    });
+
+    // Add this event listener to close the .navbar on a click outside of it
+    document.addEventListener('click', function (event) {
+        if (!navbar.contains(event.target) && !filterButton.contains(event.target)) {
+            navbar.classList.remove('visible');
+        }
+    });
+
+    const menuBtn= document.getElementsByClassName('menu-btn')[0];
+    const menu= document.querySelector('.menu');
+    const cancelBtn= document.getElementsByClassName('cancel')[0];
+
+    menuBtn.addEventListener('click', function () {
+        menu.classList.toggle('show');
+        // menuBtn.style.display = 'none';
+        menuBtn.classList.remove('visible');
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+            menu.classList.remove('show');
+            menuBtn.classList.toggle('visible');
+            // menuBtn.style.display = 'block';
+        }
+    });
+    cancelBtn.addEventListener('click',()=>{
+        // menuBtn.style.display = 'block';
+        menuBtn.classList.toggle('visible');
+        menu.classList.remove('show');
+    })
 });
 
 async function getProducts() {

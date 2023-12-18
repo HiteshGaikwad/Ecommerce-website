@@ -47,6 +47,12 @@ header{
 .header-list a:hover{
     color: blue;
 }
+.menu-btn{
+    display: none;
+}
+.menu{
+    display: none;
+}
 main{
     display: grid;
     grid-template-columns: 15% 85%;
@@ -74,7 +80,6 @@ section{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    /* border: 1px solid black; */
     box-shadow: 3px 3px 5px gray;
     border-radius: 15px;
     background-color: rgb(243, 236, 236);
@@ -142,6 +147,9 @@ nav select{
 nav h2{
     margin-top: 10px;
 }
+#filterButton{
+    display: none;
+}
 .filter-div{
     margin-top: 20px;
 }
@@ -156,3 +164,90 @@ nav h2{
     font-size: 32px;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 600px) {
+    .header-list{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+        font-size: 40px;
+        border: none;
+        background-color: transparent;
+    }
+    .menu-btn.visible{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .menu.show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        position: absolute;
+        top: 2px;
+        right: 0;
+        background-color: white;
+        box-shadow: 2px 5px 10px gray;
+        width: 100%;
+        height: 400px;
+        z-index: 1;
+    } 
+    .cancel{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .menu a{
+        font-size: 22px;
+        color: black;
+        font-weight: 600;
+    }
+    .menu a:hover{
+        color: blue;
+    }
+    #searchInput{
+        width: 200px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+    nav{
+        height: fit-content;
+    }
+    nav h2{
+        display: none;
+    }
+    #filterButton{
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .navbar{
+        display: none;
+        padding-bottom: 10px;
+    }
+    .navbar.visible {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    section{
+        grid-template-columns: 1fr;
+        padding-inline: 10px;
+    }
+    .message{
+        left:100px;
+    }
+
+}
+
