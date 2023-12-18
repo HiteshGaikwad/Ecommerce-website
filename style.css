@@ -245,7 +245,7 @@ nav h2{
     section{
         grid-template-columns: 1fr;
         padding-inline: 10px;
-        height: 82%;
+        height: 80%;
     }
     .message{
         left:100px;
