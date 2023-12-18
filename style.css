@@ -203,6 +203,7 @@ nav h2{
         font-size: 22px;
         color: black;
         font-weight: 600;
+        text-decoration: none;
     }
     .menu a:hover{
         color: blue;
@@ -244,6 +245,7 @@ nav h2{
     section{
         grid-template-columns: 1fr;
         padding-inline: 10px;
+        height: 82%;
     }
     .message{
         left:100px;
